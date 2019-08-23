@@ -1,5 +1,3 @@
-import numpy as np
-
 class Exercise_4_5(object):
     def __init__(self, labelList=[], scoreList=[]):
         assert len(labelList)== len(scoreList)
