@@ -7,6 +7,7 @@ using namespace std;
 using namespace cv;
 using namespace cv::face;
 
+
 // PS: Because of the version of my opencv is 3.4.2, I
 //     choose to use the document of 3.4.2 to write the code.
 //     但是他的教程使用版本仍然是2.4下使用的. 所以应该没有差别
@@ -163,8 +164,11 @@ int main(int argc, const char *argv[]){
         // 将eigenvector从model中slice出来
         Mat evs = Mat(W, Range::all(), Range(0, num_components));
         // subspaceProject()三个参数分别为 W: 特征向量 mean: 均值 src: 原始数据(要转为行向量)
+        // 进行的是 y = E_d^T*(x-mean(x)) 操作
         Mat projection = LDA::subspaceProject(evs, mean, images[0].reshape(1,1));
-        Mat reconstruction = LDA::subspaceProject(evs, mean, projection);
+        // subplaceReconstruct()三个参数分别也是上面的三个
+        // 进行的是 result = mean(x) + E_d*y 的操作
+        Mat reconstruction = LDA::subplaceReconstruct(evs, mean, projection);
 
         // 进行 normalization并且改变形状
         reconstruction = norm_0_255(reconstruction.reshape(1, images[0].rows));
