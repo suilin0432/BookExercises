@@ -22,6 +22,18 @@ nu = 0.000840
 obj = -1297.172441, rho = -0.345907
 nSV = 3025, nBSV = 0
 Total nSV = 3025
+.......*..*
+optimization finished, #iter = 9059
+nu = 0.107636
+obj = -1329.972707, rho = -0.332922
+nSV = 3025, nBSV = 0
+Total nSV = 3025
+*.*
+optimization finished, #iter = 1113
+nu = 0.088356
+obj = -1950.406413, rho = 0.335733
+nSV = 301, nBSV = 251
+Total nSV = 301
 Accuracy = 53.375% (2135/4000) (classification)
 The accuracy of the first model (C = 1 and kernelType = 2) is 53.37499999999999%.
 Accuracy = 96.675% (3867/4000) (classification)
@@ -30,3 +42,7 @@ Accuracy = 95.675% (3827/4000) (classification)
 The accuracy of the third model (C = 1 and kernelType = 0) is 95.675%.
 Accuracy = 55.4% (2216/4000) (classification)
 The accuracy of the forth model (C = 1000 and kernelType = 2) is 55.400000000000006%.
+Accuracy = 52.625% (2105/4000) (classification)
+The accuracy of the forth model (C = 8 and gamma = 2 and without scale) is 52.625%.
+Accuracy = 96.95% (3878/4000) (classification)
+The accuracy of the forth model (C = 8 and gamma = 2 and with sacle) is 96.95%.

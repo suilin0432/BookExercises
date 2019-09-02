@@ -130,6 +130,24 @@ model4 = trainClass.train()
 pLabel4, pAcc4, pVal4 = trainClass.predict(model4)
 print("The accuracy of the forth model (C = 1000 and kernelType = 2) is {0}%.".format(pAcc4[0]))
 
+# 5. 使用easy.py去找超参数
+# 使用命令: python3 easy.py ../../ExerciseCode_Python/svmguide1.txt ../../ExerciseCode_Python/svmguide1.t
+# 找到的超参数: c=8.0, g=2.0
+# 在这里试一下
+trainClass.setDefaultParams()
+trainClass.setCost(8)
+trainClass.setGamma(2)
+model5 = trainClass.train()
+pLabel5, pAcc5, pVal5 = trainClass.predict(model5)
+print("The accuracy of the forth model (C = 8 and gamma = 2 and without scale) is {0}%.".format(pAcc5[0]))
+
+trainClassScale.setDefaultParams()
+trainClassScale.setCost(8)
+trainClassScale.setGamma(2)
+model5_ = trainClassScale.train()
+pLabel5_, pAcc5_, pVal5_ = trainClassScale.predict(model5_)
+print("The accuracy of the forth model (C = 8 and gamma = 2 and with sacle) is {0}%.".format(pAcc5_[0]))
+
 
 '''
 下面是教程中的使用的例子说明 注释掉了
