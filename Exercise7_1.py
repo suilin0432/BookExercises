@@ -13,6 +13,9 @@ class Exercise7_1(object):
         self.testLabel = []
         self.testData = []
         # 下面是默认的各个参数值
+        self.setDefaultParams()
+
+    def setDefaultParams(self):
         self.cost = 1
         self.svmType = 0
         self.kernelType = 2
@@ -47,12 +50,15 @@ class Exercise7_1(object):
         # 返回模型 model
         assert len(self.trainLabel) > 0 and len(self.trainData) > 0 and len(self.trainLabel) == len(self.trainData)
         # svmType kernelType degree gamma coef0 cost
-        param = "-s {0} -t {1} -d {2} -g {3} -r {4} -c {4}".format(self.svmType, self.kernelType, self.degree, self.gamma, self.coef0, self.cost)
+        param = "-s {0} -t {1} -d {2} -g {3} -r {4} -c {5}".format(self.svmType, self.kernelType, self.degree, self.gamma, self.coef0, self.cost)
+        # print(param)
         model = svm_train(self.trainLabel, self.trainData, param)
         return model
 
-    def test(self, model):
-        assert isinstance(model, svm_model)
+    def predict(self, model):
+        # 不知道为什么 isinstance(model, svm_model) 在这里是false 在ipython里命名就是True
+        # assert isinstance(model, svm_model)
+        assert str(type(model)) == "<class 'svm.svm_model'>"
         assert len(self.testLabel) > 0 and len(self.testData) > 0 and len(self.testLabel) == len(self.testData)
         pLabel, pAcc, pVal = svm_predict(self.testLabel, self.testData, model)
         return pLabel, pAcc, pVal
@@ -83,8 +89,25 @@ class Exercise7_1(object):
 trainClass = Exercise7_1()
 trainClass.loadTrainDataFromFile("./svmguide1.txt")
 trainClass.loadTestDataFromFile("./svmguide1.t")
-#
-model = trainClass.train()
+# 1. the origin version -- C = 1 and kernelType = 2 (RBF/Gaussian kernel)
+model1 = trainClass.train()
+pLabel1, pAcc1, pVal1 = trainClass.predict(model1)
+print("The accuracy of the first model (C = 1 and kernelType = 2) is {0}%.".format(pAcc1[0]))
+# 2. 使用svm_scale函数 并没有找到svm_scale这个函数...
+
+# 3. 使用linear kernel代替 RBF kernel 即使用 -t 参数为2
+trainClass.setKernelType(0)
+model3 = trainClass.train()
+pLabel3, pAcc3, pVal3 = trainClass.predict(model3)
+print("The accuracy of the third model (C = 1 and kernelType = 0) is {0}%.".format(pAcc3[0]))
+
+# 4. 将 Cost = 1000 然后使用 RBF kernel
+trainClass.setDefaultParams()
+trainClass.setCost(1000)
+model4 = trainClass.train()
+pLabel4, pAcc4, pVal4 = trainClass.predict(model4)
+print("The accuracy of the forth model (C = 1 and kernelType = 2) is {0}%.".format(pAcc4[0]))
+
 
 '''
 下面是教程中的使用的例子说明 注释掉了
