@@ -1,4 +1,5 @@
 from libsvm import *
+from scipy import sparse
 # PS: 因为我在libsvm的util的文件里面引入了 svmutil svm commonutil 所有内容所以
 # 直接这么写就行了
 import os
@@ -85,6 +86,19 @@ class Exercise7_1(object):
         assert len(testLabel) > 0
         self.testLabel, self.testData = testLabel, testData
 
+    def getTrainData(self):
+        return self.trainData
+
+    def getTestData(self):
+        return self.testData
+
+    def getTrainLabel(self):
+        return self.trainLabel
+
+    def getTestLabel(self):
+        return self.testLabel
+
+
 
 trainClass = Exercise7_1()
 trainClass.loadTrainDataFromFile("./svmguide1.txt")
@@ -93,9 +107,17 @@ trainClass.loadTestDataFromFile("./svmguide1.t")
 model1 = trainClass.train()
 pLabel1, pAcc1, pVal1 = trainClass.predict(model1)
 print("The accuracy of the first model (C = 1 and kernelType = 2) is {0}%.".format(pAcc1[0]))
-# 2. 使用svm_scale函数 并没有找到svm_scale这个函数...
+# 2. 使用svm_scale函数 并没有找到svm_scale这个函数... 是外面的一个运行文件时svm_scale
+# 命令1: ./svm-scale -l -1 -u 1 -s ../ExerciseCode_Python/scaleParam ../ExerciseCode_Python/svmguide1.txt > ../ExerciseCode_Python/svmguide1_.txt
+# 命令2: ./svm-scale -r ../ExerciseCode_Python/scaleParam ../ExerciseCode_Python/svmguide1.t > ../ExerciseCode_Python/svmguide1_.t
+trainClassScale = Exercise7_1()
+trainClassScale.loadTrainDataFromFile("./svmguide1_.txt")
+trainClassScale.loadTestDataFromFile("./svmguide1_.t")
+model2 = trainClassScale.train()
+pLabel2, pAcc2, pVal2 = trainClassScale.predict(model2)
+print("The accuracy of the second model (C = 1 and kernelType = 2 and datas are scaled) is {0}%.".format(pAcc1[0]))
 
-# 3. 使用linear kernel代替 RBF kernel 即使用 -t 参数为2
+# 3. 使用linear kernel代替 RBF kernel 即使用 -t 参数为0
 trainClass.setKernelType(0)
 model3 = trainClass.train()
 pLabel3, pAcc3, pVal3 = trainClass.predict(model3)
@@ -106,7 +128,7 @@ trainClass.setDefaultParams()
 trainClass.setCost(1000)
 model4 = trainClass.train()
 pLabel4, pAcc4, pVal4 = trainClass.predict(model4)
-print("The accuracy of the forth model (C = 1 and kernelType = 2) is {0}%.".format(pAcc4[0]))
+print("The accuracy of the forth model (C = 1000 and kernelType = 2) is {0}%.".format(pAcc4[0]))
 
 
 '''
