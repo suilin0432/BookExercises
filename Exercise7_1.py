@@ -23,6 +23,7 @@ class Exercise7_1(object):
         self.gamma = 1
         self.degree = 3
         self.coef0 = 0
+        self.isQuiet = False
 
     def setCost(self, cost):
         assert cost > 0
@@ -52,6 +53,8 @@ class Exercise7_1(object):
         assert len(self.trainLabel) > 0 and len(self.trainData) > 0 and len(self.trainLabel) == len(self.trainData)
         # svmType kernelType degree gamma coef0 cost
         param = "-s {0} -t {1} -d {2} -g {3} -r {4} -c {5}".format(self.svmType, self.kernelType, self.degree, self.gamma, self.coef0, self.cost)
+        if self.isQuiet:
+            param += " -q"
         # print(param)
         model = svm_train(self.trainLabel, self.trainData, param)
         return model
@@ -85,6 +88,12 @@ class Exercise7_1(object):
         assert len(testLabel) == len(testData)
         assert len(testLabel) > 0
         self.testLabel, self.testData = testLabel, testData
+
+    def setQuiet(self, isQuiet):
+        self.isQuiet = isQuiet
+
+    def getQuiet(self):
+        return self.isQuiet
 
     def getTrainData(self):
         return self.trainData
