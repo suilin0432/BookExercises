@@ -1,0 +1,3 @@
+# first try (without changing the p value manually and the output messages are saved in file -- result1.txt)
+./pmsvm ~/Documents/MATLAB/Code/BookExercises/Exercise7_3_Data/train1.txt ~/Documents/MATLAB/Code/BookExercises/Exercise7_3_Data/test1.txt
+

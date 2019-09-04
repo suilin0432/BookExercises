@@ -1,0 +1,410 @@
+Dataset loaded in 647 msec.
+*.
+optimization finished, #iter = 8
+nSV = 165
+*.
+optimization finished, #iter = 6
+nSV = 134
+*.
+optimization finished, #iter = 7
+nSV = 286
+*.
+optimization finished, #iter = 7
+nSV = 276
+*.
+optimization finished, #iter = 7
+nSV = 285
+*.
+optimization finished, #iter = 6
+nSV = 258
+*.
+optimization finished, #iter = 7
+nSV = 292
+*.
+optimization finished, #iter = 7
+nSV = 242
+*.
+optimization finished, #iter = 7
+nSV = 305
+*.
+optimization finished, #iter = 7
+nSV = 266
+*.
+optimization finished, #iter = 7
+nSV = 279
+*.
+optimization finished, #iter = 7
+nSV = 300
+*.
+optimization finished, #iter = 7
+nSV = 265
+*.
+optimization finished, #iter = 7
+nSV = 253
+*.
+optimization finished, #iter = 7
+nSV = 324
+*.
+optimization finished, #iter = 7
+nSV = 160
+*.
+optimization finished, #iter = 7
+nSV = 239
+*.
+optimization finished, #iter = 7
+nSV = 219
+*.
+optimization finished, #iter = 7
+nSV = 287
+*.
+optimization finished, #iter = 7
+nSV = 266
+*.
+optimization finished, #iter = 7
+nSV = 290
+*.
+optimization finished, #iter = 7
+nSV = 293
+*.
+optimization finished, #iter = 7
+nSV = 310
+*.
+optimization finished, #iter = 7
+nSV = 272
+*.
+optimization finished, #iter = 7
+nSV = 224
+*.
+optimization finished, #iter = 7
+nSV = 224
+*.
+optimization finished, #iter = 6
+nSV = 304
+*.
+optimization finished, #iter = 7
+nSV = 285
+*.
+optimization finished, #iter = 6
+nSV = 181
+*.
+optimization finished, #iter = 7
+nSV = 224
+*.
+optimization finished, #iter = 7
+nSV = 233
+*.
+optimization finished, #iter = 6
+nSV = 214
+*.
+optimization finished, #iter = 7
+nSV = 280
+*.
+optimization finished, #iter = 7
+nSV = 272
+*.
+optimization finished, #iter = 7
+nSV = 238
+*.
+optimization finished, #iter = 7
+nSV = 311
+*.
+optimization finished, #iter = 6
+nSV = 212
+*.
+optimization finished, #iter = 7
+nSV = 191
+*.
+optimization finished, #iter = 7
+nSV = 191
+*.
+optimization finished, #iter = 8
+nSV = 301
+*.
+optimization finished, #iter = 7
+nSV = 279
+*.
+optimization finished, #iter = 8
+nSV = 240
+*.
+optimization finished, #iter = 8
+nSV = 214
+*.
+optimization finished, #iter = 7
+nSV = 321
+*.
+optimization finished, #iter = 7
+nSV = 235
+*.
+optimization finished, #iter = 7
+nSV = 260
+*.
+optimization finished, #iter = 7
+nSV = 221
+*.
+optimization finished, #iter = 7
+nSV = 226
+*.
+optimization finished, #iter = 7
+nSV = 236
+*.
+optimization finished, #iter = 8
+nSV = 291
+*.
+optimization finished, #iter = 8
+nSV = 222
+*.
+optimization finished, #iter = 7
+nSV = 263
+*.
+optimization finished, #iter = 8
+nSV = 273
+*.
+optimization finished, #iter = 7
+nSV = 181
+*.
+optimization finished, #iter = 7
+nSV = 260
+*.
+optimization finished, #iter = 6
+nSV = 241
+*.
+optimization finished, #iter = 6
+nSV = 156
+*.
+optimization finished, #iter = 7
+nSV = 258
+*.
+optimization finished, #iter = 8
+nSV = 309
+*.
+optimization finished, #iter = 7
+nSV = 265
+*.
+optimization finished, #iter = 7
+nSV = 221
+*.
+optimization finished, #iter = 7
+nSV = 232
+*.
+optimization finished, #iter = 7
+nSV = 186
+*.
+optimization finished, #iter = 9
+nSV = 163
+*.
+optimization finished, #iter = 7
+nSV = 129
+*.
+optimization finished, #iter = 7
+nSV = 191
+*.
+optimization finished, #iter = 8
+nSV = 280
+*.
+optimization finished, #iter = 7
+nSV = 266
+*.
+optimization finished, #iter = 7
+nSV = 266
+*.
+optimization finished, #iter = 7
+nSV = 149
+*.
+optimization finished, #iter = 7
+nSV = 299
+*.
+optimization finished, #iter = 7
+nSV = 245
+*.
+optimization finished, #iter = 7
+nSV = 263
+*.
+optimization finished, #iter = 7
+nSV = 270
+*.
+optimization finished, #iter = 7
+nSV = 214
+*.
+optimization finished, #iter = 7
+nSV = 174
+*.
+optimization finished, #iter = 7
+nSV = 282
+*.
+optimization finished, #iter = 7
+nSV = 269
+*.
+optimization finished, #iter = 7
+nSV = 239
+*.
+optimization finished, #iter = 7
+nSV = 189
+*.
+optimization finished, #iter = 7
+nSV = 164
+*.
+optimization finished, #iter = 7
+nSV = 288
+*.
+optimization finished, #iter = 8
+nSV = 302
+*.
+optimization finished, #iter = 8
+nSV = 244
+*.
+optimization finished, #iter = 8
+nSV = 185
+*.
+optimization finished, #iter = 6
+nSV = 210
+*.
+optimization finished, #iter = 8
+nSV = 280
+*.
+optimization finished, #iter = 7
+nSV = 273
+*.
+optimization finished, #iter = 8
+nSV = 195
+*.
+optimization finished, #iter = 7
+nSV = 250
+*.
+optimization finished, #iter = 7
+nSV = 262
+*.
+optimization finished, #iter = 7
+nSV = 269
+*.
+optimization finished, #iter = 7
+nSV = 175
+*.
+optimization finished, #iter = 6
+nSV = 210
+*.
+optimization finished, #iter = 7
+nSV = 238
+*.
+optimization finished, #iter = 7
+nSV = 267
+*.
+optimization finished, #iter = 7
+nSV = 293
+*.
+optimization finished, #iter = 7
+nSV = 272
+*.
+optimization finished, #iter = 7
+nSV = 176
+*.
+optimization finished, #iter = 6
+nSV = 162
+*.
+optimization finished, #iter = 7
+nSV = 182
+Finished in 4336 msec.
+Dataset loaded in 864 msec.
+Finished in 744 msec.
+20/20=100%
+17/20=85%
+10/20=50%
+7/20=35%
+6/20=30%
+11/20=55%
+4/20=20%
+12/18=66.6667%
+16/20=80%
+12/20=60%
+10/20=50%
+15/20=75%
+14/20=70%
+12/20=60%
+8/20=40%
+20/20=100%
+10/20=50%
+19/20=95%
+6/20=30%
+11/20=55%
+4/20=20%
+15/20=75%
+4/20=20%
+4/20=20%
+6/20=30%
+7/20=35%
+9/20=45%
+14/20=70%
+20/20=100%
+7/20=35%
+13/20=65%
+14/20=70%
+12/20=60%
+12/20=60%
+16/20=80%
+10/20=50%
+16/20=80%
+20/20=100%
+7/20=35%
+10/20=50%
+13/20=65%
+13/19=68.4211%
+11/19=57.8947%
+13/20=65%
+18/20=90%
+12/20=60%
+16/20=80%
+14/20=70%
+12/20=60%
+9/20=45%
+13/16=81.25%
+16/20=80%
+8/20=40%
+12/20=60%
+8/20=40%
+13/20=65%
+20/20=100%
+10/20=50%
+7/20=35%
+6/20=30%
+12/20=60%
+5/20=25%
+17/20=85%
+15/17=88.2353%
+18/20=90%
+19/20=95%
+7/20=35%
+4/20=20%
+17/20=85%
+20/20=100%
+13/20=65%
+11/20=55%
+16/20=80%
+10/19=52.6316%
+14/20=70%
+18/20=90%
+11/20=55%
+16/20=80%
+11/20=55%
+10/20=50%
+17/20=85%
+2/20=10%
+4/20=20%
+19/20=95%
+10/20=50%
+10/20=50%
+9/20=45%
+16/20=80%
+16/20=80%
+12/20=60%
+17/20=85%
+12/20=60%
+20/20=100%
+13/20=65%
+17/20=85%
+5/20=25%
+15/20=75%
+3/19=15.7895%
+20/20=100%
+14/20=70%
+18/20=90%
+Overall accuracy = 61.6343
+Average accuracy = 61.692
