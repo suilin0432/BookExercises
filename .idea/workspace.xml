@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48b2520e-22d6-4535-84f8-8f588a240100" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Exercise7_3.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Exercise7_1.py" afterPath="$PROJECT_DIR$/Exercise7_1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Exercise7_3.py" afterPath="$PROJECT_DIR$/Exercise7_3.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,10 +49,10 @@
             <entry file="file://$PROJECT_DIR$/Exercise7_1.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="383">
-                  <caret line="163" column="3" lean-forward="false" selection-start-line="163" selection-start-column="3" selection-end-line="163" selection-end-column="3" />
+                  <caret line="163" column="7" lean-forward="false" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="7" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
-                    <marker date="1567468710796" expanded="true" signature="172:3122" ph="..." />
+                    <marker date="1567586532209" expanded="true" signature="172:3122" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -70,10 +71,10 @@
           <file leaf-file-name="Exercise7_3.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Exercise7_3.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+                <state relative-caret-position="315">
+                  <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
                   <folding>
-                    <element signature="e#0#36#0" expanded="true" />
+                    <element signature="e#0#18#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -96,11 +97,11 @@
           <file leaf-file-name="Exercise7_1.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Exercise7_1.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1549">
-                  <caret line="185" column="12" lean-forward="false" selection-start-line="185" selection-start-column="12" selection-end-line="185" selection-end-column="12" />
+                <state relative-caret-position="210">
+                  <caret line="133" column="105" lean-forward="true" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="105" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
-                    <marker date="1567468710796" expanded="true" signature="172:3122" ph="..." />
+                    <marker date="1567586532209" expanded="true" signature="172:3122" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -163,7 +164,6 @@
       <find>numpy</find>
       <find>n-fold</find>
       <find>p_acc</find>
-      <find>svm_model</find>
       <find>svm_scale</find>
       <find>parameters</find>
       <find>csr_scale</find>
@@ -172,6 +172,7 @@
       <find>scale</find>
       <find>csr_find_scale_param</find>
       <find>sparse</find>
+      <find>svm_model</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -185,6 +186,7 @@
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/libsvm/__init__.py" />
         <option value="$PROJECT_DIR$/Exercise7_1_Result.txt" />
         <option value="$PROJECT_DIR$/Exercise7_1.py" />
+        <option value="$PROJECT_DIR$/Exercise7_3_Result.txt" />
         <option value="$PROJECT_DIR$/Exercise7_3.py" />
       </list>
     </option>
@@ -238,6 +240,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/mac/Desktop/book/ExerciseCode_Python/svmutilSourceCode.py" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -559,7 +566,7 @@
           <caret line="163" column="3" lean-forward="true" selection-start-line="163" selection-start-column="3" selection-end-line="163" selection-end-column="3" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1567468710796" expanded="true" signature="172:3122" ph="..." />
+            <marker date="1567586532209" expanded="true" signature="172:3122" ph="..." />
           </folding>
         </state>
       </provider>
@@ -612,7 +619,7 @@
           <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="12" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1567468710796" expanded="true" signature="172:3122" ph="..." />
+            <marker date="1567586532209" expanded="true" signature="172:3122" ph="..." />
           </folding>
         </state>
       </provider>
@@ -701,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exercise7_1_Result.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LIBSVM_PYTHON_README">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -716,23 +716,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test1.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise7_1_Result.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Exercise7_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
-          <caret line="163" column="3" lean-forward="false" selection-start-line="163" selection-start-column="3" selection-end-line="163" selection-end-column="3" />
+          <caret line="163" column="7" lean-forward="false" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="7" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1567468710796" expanded="true" signature="172:3122" ph="..." />
+            <marker date="1567586532209" expanded="true" signature="172:3122" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise7_3_Result.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Exercise7_3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        <state relative-caret-position="315">
+          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,0 +1,5 @@
+Total nSV = 1515
+Accuracy = 8.22123% (165/2007) (classification)
+The accuracy is 8.221225710014949%.
+The timecost is:
+ Training time: 65.53187608718872, Testing time: 42.87727093696594
