@@ -1,3 +1,12 @@
-# first try (without changing the p value manually and the output messages are saved in file -- result1.txt)
-./pmsvm ~/Documents/MATLAB/Code/BookExercises/Exercise7_3_Data/train1.txt ~/Documents/MATLAB/Code/BookExercises/Exercise7_3_Data/test1.txt
+PS: It's not allowed to set p as 0 or numbers which are larger than 0, so the second try is not right... We could see that the invp is inf if p equals to 0 (because of dividing zero)
+# first try (without changing the p value (default value -1 which means using Chi-Squared kernel) manually and the output messages are saved in file -- result1.txt)
+./pmsvm ~/Documents/MATLAB/Code/BookExercises/Exercise7_3_Data/train1.txt ~/Documents/MATLAB/Code/BookExercises/Exercise7_3_Data/result1.txt
 
+# second try (change p value to 0 (which means that we use the Helinger's kernel), however, the guideLine say p should less then zero and the output messages are saved in file -- result2.txt)
+./pmsvm ~/Documents/MATLAB/Code/BookExercises/Exercise7_3_Data/train1.txt ~/Documents/MATLAB/Code/BookExercises/Exercise7_3_Data/result2.txt
+
+# third try (change p value to -8 (as the value which is recommended by the guideline in order to get the HIK kernel) and the output messages are saved in file -- result3.txt)
+./pmsvm ~/Documents/MATLAB/Code/BookExercises/Exercise7_3_Data/train1.txt ~/Documents/MATLAB/Code/BookExercises/Exercise7_3_Data/result3.txt
+
+# forth try (change p value to -32 (as the value which is recommended by the book) and the output messages are saved in file -- result4.txt)
+./pmsvm ~/Documents/MATLAB/Code/BookExercises/Exercise7_3_Data/train1.txt ~/Documents/MATLAB/Code/BookExercises/Exercise7_3_Data/result4.txt
