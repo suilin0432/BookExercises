@@ -1,0 +1,23 @@
+..*
+optimization finished, #iter = 27
+Objective value = -1873.022654
+nSV = 4645
+..*
+optimization finished, #iter = 26
+Objective value = -1786.944995
+nSV = 4621
+..*
+optimization finished, #iter = 27
+Objective value = -1896.577841
+nSV = 4708
+..*
+optimization finished, #iter = 27
+Objective value = -1841.413821
+nSV = 4712
+..*.
+optimization finished, #iter = 30
+Objective value = -1883.797565
+nSV = 4704
+Cross Validation Accuracy = 96.8827%
+The time of loading data is 1.8127458095550537.
+ The time of training with 4-fold-cross-validation is 1.945530891418457.
