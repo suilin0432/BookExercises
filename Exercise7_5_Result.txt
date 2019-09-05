@@ -1,23 +1,57 @@
-..*
-optimization finished, #iter = 27
-Objective value = -1873.022654
-nSV = 4645
-..*
-optimization finished, #iter = 26
-Objective value = -1786.944995
-nSV = 4621
-..*
-optimization finished, #iter = 27
-Objective value = -1896.577841
-nSV = 4708
-..*
-optimization finished, #iter = 27
-Objective value = -1841.413821
-nSV = 4712
-..*.
-optimization finished, #iter = 30
-Objective value = -1883.797565
-nSV = 4704
-Cross Validation Accuracy = 96.8827%
-The time of loading data is 1.8127458095550537.
- The time of training with 4-fold-cross-validation is 1.945530891418457.
+...**.*
+optimization finished, #iter = 42
+Objective value = -2228.218763
+nSV = 3898
+...*
+optimization finished, #iter = 35
+Objective value = -2121.076023
+nSV = 3881
+....*
+optimization finished, #iter = 44
+Objective value = -2261.923914
+nSV = 3937
+....*
+optimization finished, #iter = 43
+Objective value = -2158.314314
+nSV = 3937
+...*
+optimization finished, #iter = 34
+Objective value = -2223.893990
+nSV = 3994
+.........*.....*
+optimization finished, #iter = 14981
+nu = 0.060641
+obj = -2144.156517, rho = -0.511970
+nSV = 3775, nBSV = 149
+Total nSV = 3775
+.........*.....*
+optimization finished, #iter = 14865
+nu = 0.060007
+obj = -2113.424854, rho = -0.537923
+nSV = 3742, nBSV = 137
+Total nSV = 3742
+.........*......*
+optimization finished, #iter = 15071
+nu = 0.060389
+obj = -2142.444237, rho = -0.526127
+nSV = 3809, nBSV = 146
+Total nSV = 3809
+.........*......*
+optimization finished, #iter = 15393
+nu = 0.061375
+obj = -2178.770589, rho = -0.503411
+nSV = 3811, nBSV = 142
+Total nSV = 3811
+.........*.....*
+optimization finished, #iter = 14874
+nu = 0.061107
+obj = -2177.032884, rho = -0.503024
+nSV = 3760, nBSV = 149
+Total nSV = 3760
+Cross Validation Accuracy = 96.7049%
+The time of loading data is 1.8111908435821533.
+Training with liblinear:
+The time of training with 5-fold-cross-validation is 2.0696799755096436.
+Cross Validation Accuracy = 96.8284%
+Training with libsvm:
+ The time of training with 5-fold-cross-validation is 3137.4321208000183.
