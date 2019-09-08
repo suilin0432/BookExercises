@@ -63,7 +63,7 @@ fprintf("The error1 is %f.\n", Error1);
 minError = 1;
 minV1 = 0;
 minV2 = 0;
-varList = 0.05:0.05:3;
+varList = 0.05:0.05:5;
 varLength = length(varList);
 predict3R = zeros(l);
 for i = 1:varLength
@@ -76,7 +76,7 @@ for i = 1:varLength
                 predict3(m, n) = exp(-0.5*temp*iSigma3*temp');
             end
         end
-        predict3R = predict3R / sum(predict3R(:));
+        predict3 = predict3 / sum(predict3(:));
         Error = 1 - sum(min(GT(:),predict3(:)));
         if minError > Error
             minError = Error;
@@ -94,5 +94,10 @@ plot3(recordX, recordY, GTR, 'b');
 hold on;
 plot3(recordX, recordY, predict3R, 'r');
 legend("GT pdf", "approximate pdf");
-% we could see the minError is near 0. variance of a is 1.25 variance of b is 2.75
-% PS: 这个Error不太靠谱啊, 最优情况效果肉眼看上去并不是很好...
+% we could see the minError is about 0.126675. variance of a is 2 variance 
+% of b is 3. It seems like not better than the former one. I think it might
+% be caused by the range of the variance value, so when I change the range
+% from 0.05 ~ 3 to 0.05 ~ 4 It has the minError 0.113768 when the variance
+% of a is 1.85 and the variance of b is 3.75. And when I change the range
+% upperbound to 5, we could get the minError is also euqal to 0.113768 with
+% the variance of a is and the variance of b is .
