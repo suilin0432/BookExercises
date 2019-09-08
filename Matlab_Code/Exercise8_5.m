@@ -27,7 +27,7 @@ GT = GT / sum(GT(:));
 % the product of their pdf to approximate the nondiagonal complex Gaussian
 % density
 
-% Solution: In this condition, the iSigma matrix is diagnol. There are no 
+% Solution: In this condition, the iSigma matrix is diagnal. There are no 
 % relationships between a & b.
 iSigma2 = inv([2 0; 0 4]);
 predict2 = zeros(l);
