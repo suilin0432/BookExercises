@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48b2520e-22d6-4535-84f8-8f588a240100" name="Default" comment="" />
+    <list default="true" id="48b2520e-22d6-4535-84f8-8f588a240100" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Exercise9_6.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +27,7 @@
             <entry file="file://$PROJECT_DIR$/Exercise7_1.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="278">
-                  <caret line="165" column="25" lean-forward="true" selection-start-line="165" selection-start-column="25" selection-end-line="165" selection-end-column="25" />
+                  <caret line="165" column="25" lean-forward="false" selection-start-line="165" selection-start-column="25" selection-end-line="165" selection-end-column="25" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
                     <marker date="1567606171182" expanded="true" signature="172:3321" ph="..." />
@@ -33,14 +36,24 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Exercise7_5.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Exercise7_5.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Exercise7_5.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="71" lean-forward="true" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+                <state relative-caret-position="315">
+                  <caret line="21" column="104" lean-forward="false" selection-start-line="21" selection-start-column="104" selection-end-line="21" selection-end-column="104" />
                   <folding>
                     <element signature="e#74#93#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Exercise9_6.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Exercise9_6.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -69,11 +82,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Exercise7_1.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Exercise7_1.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Exercise7_1.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-21">
-                  <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+                  <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
                     <marker date="1567606171182" expanded="true" signature="172:3321" ph="..." />
@@ -96,13 +109,13 @@
             <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/svmliblinear/liblinearutil.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="183">
-                  <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+                  <caret line="68" column="13" lean-forward="false" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="svmutil.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="svmutil.py" pinned="false" current-in-tab="false">
             <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/libsvm/svmutil.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-344">
@@ -169,6 +182,7 @@
         <option value="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/liblinear/__init__.py" />
         <option value="$PROJECT_DIR$/Exercise7_5_Result.txt" />
         <option value="$PROJECT_DIR$/Exercise7_5.py" />
+        <option value="$PROJECT_DIR$/Exercise9_6.py" />
       </list>
     </option>
   </component>
@@ -754,7 +768,7 @@
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/svmliblinear/liblinearutil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
-          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+          <caret line="68" column="13" lean-forward="false" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -783,14 +797,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exercise7_1.py">
+    <entry file="file://$PROJECT_DIR$/Exercise7_5_Result.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="165" column="25" lean-forward="true" selection-start-line="165" selection-start-column="25" selection-end-line="165" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1567606171182" expanded="true" signature="172:3321" ph="..." />
-          </folding>
+        <state relative-caret-position="780">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -802,21 +813,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exercise7_5_Result.txt">
+    <entry file="file://$PROJECT_DIR$/Exercise7_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="278">
+          <caret line="165" column="25" lean-forward="false" selection-start-line="165" selection-start-column="25" selection-end-line="165" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <marker date="1567606171182" expanded="true" signature="172:3321" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Exercise7_5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="71" lean-forward="true" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+        <state relative-caret-position="315">
+          <caret line="21" column="104" lean-forward="false" selection-start-line="21" selection-start-column="104" selection-end-line="21" selection-end-column="104" />
           <folding>
             <element signature="e#74#93#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise9_6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
