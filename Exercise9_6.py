@@ -28,12 +28,12 @@ print("using {} s to perform sqrt data transformation".format(time4 - time3))
 time5 = time.time()
 model1 = train(trainLabel, trainData)
 p_label1, p_acc1, p_val1 = predict(testLabel, testData, model1)
-print("The accuracy is {} when we perform the training process without any transform of trainData".format(p_acc1[0]))
 
-model2 = trainData(trainLabel, sqrtTrainData)
+model2 = train(trainLabel, sqrtTrainData)
 p_label2, p_acc2, p_val2 = predict(testLabel, sqrtTestData, model2)
-print("The accuracy is {} when we perform the training process with sqrt transform of trainData".format(p_acc2[0]))
-
 
 time6 = time.time()
 print("using {} s to training".format(time6 - time5))
+
+print("\nThe accuracy is {} when we perform the training process without any transform on trainData".format(p_acc1[0]))
+print("The accuracy is {} when we perform the training process with sqrt transform on trainData".format(p_acc2[0]))

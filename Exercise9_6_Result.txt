@@ -1,0 +1,168 @@
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -1.236593
+nSV = 17662
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -0.264856
+nSV = 4808
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -0.704671
+nSV = 8902
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -0.351866
+nSV = 4407
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -1.709009
+nSV = 17170
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -0.914731
+nSV = 15345
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -1.206620
+nSV = 17382
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -0.527105
+nSV = 7577
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -0.702217
+nSV = 8852
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -2.116859
+nSV = 26358
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -253.816992
+nSV = 18280
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -54.234814
+nSV = 4868
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -145.893831
+nSV = 9187
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -70.598989
+nSV = 4258
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -340.164262
+nSV = 17252
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -189.096626
+nSV = 15976
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -253.740661
+nSV = 18161
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -107.505345
+nSV = 7673
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -140.833628
+nSV = 8824
+....................................................................................................
+optimization finished, #iter = 1000
+
+WARNING: reaching max number of iterations
+Using -s 2 may be faster (also see FAQ)
+
+Objective value = -436.626291
+nSV = 26970
+using 12.952440977096558 s to load the data
+using 4.762027978897095 s to perform sqrt data transformation
+Accuracy = 84.17% (8417/10000) (classification)
+Accuracy = 85.73% (8573/10000) (classification)
+using 357.2730369567871 s to training
+
+The accuracy is 84.17 when we perform the training process without any transform of trainData
+The accuracy is 85.72999999999999 when we perform the training process with sqrt transform of trainData
