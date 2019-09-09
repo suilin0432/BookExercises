@@ -164,5 +164,5 @@ Accuracy = 84.17% (8417/10000) (classification)
 Accuracy = 85.73% (8573/10000) (classification)
 using 357.2730369567871 s to training
 
-The accuracy is 84.17 when we perform the training process without any transform of trainData
-The accuracy is 85.72999999999999 when we perform the training process with sqrt transform of trainData
+The accuracy is 84.17 when we perform the training process without any transform on trainData
+The accuracy is 85.72999999999999 when we perform the training process with sqrt transform on trainData
