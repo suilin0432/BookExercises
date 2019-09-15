@@ -1,5 +1,8 @@
 from math import sqrt, log2, log
 
+# PS: Because of the float calculate error of python, so maybe sometimes the result of the forth
+#     property is not right. Maybe we could use the tool with higher accuracy to deal with this problem.
+
 def KLCal(a, b):
     assert len(a) == len(b)
     result = 0
