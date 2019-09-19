@@ -124,6 +124,7 @@ for i = 1:length(LAMBDALIST)
     fprintf("When λ = %f, we have %d zero entries, and the distance between truealpha and alpha0 is %f(norm2), %f(norm1). \n", LAMBDA, count_, norm(alpha0-truealpha), norm(alpha0-truealpha, 1));
 end
 
+% We could see when λ increases, the number of zero entries becomes larger.
     
     
     
