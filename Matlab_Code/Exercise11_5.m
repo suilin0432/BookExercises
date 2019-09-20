@@ -1,5 +1,10 @@
 function [integralImage, getSumFunction] = Exercise11_5(A)
-% The implement of integral image
+% The implement of integral image and function which calculates the sum in
+% any rectangular image patch in the originImage by using the integral
+% image
+% return parameters:
+%   integralImage: the calculated integral image
+%   getSumFunction: the function that calculate the sum of A[x1:x2, y1:y2]
 
 % Begin to calculate the integralImage
 B = zeros(size(A));
