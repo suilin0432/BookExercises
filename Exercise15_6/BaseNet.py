@@ -27,6 +27,7 @@ class BaseNet(nn.Module):
         self.conv3 = nn.Conv2d(50, 500, 4, stride=1, padding=0)
         self.ReLU = nn.ReLU(True)
         self.conv4 = nn.Conv2d(500, 10, 1, stride=1, padding=0)
+        self.dropout = nn.Dropout(0.7)
         self.softmax = nn.Softmax(dim=1)
         self.pipeline = nn.Sequential(
             self.conv1,
@@ -52,10 +53,12 @@ class BaseNet(nn.Module):
             torch.nn.init.xavier_uniform_(module.weight)
             torch.nn.init.constant_(module.bias, 0)
 
-    def forward(self, x):
+    def forward(self, x, hasDropout=False):
         assert x.shape[1:] == (1, 28, 28)
         x = self.pipeline(x)
         x = x.view(x.shape[0], -1)
+        if hasDropout:
+            x = self.dropout(x)
         x = self.softmax(x)
         return x
 
@@ -79,7 +82,7 @@ if __name__ == "__main__":
     # 采用的是 matconvnet 的配置
     batch_size = 100
     maxEpoch = 20
-    lr = 0.002
+    lr = 0.001
     # PS: 很神奇的是用 Adam 的时候损失函数不收敛... 一点都不变化... 用 Adam 的时候降低学习率就好了...
     optimizer = torch.optim.SGD(net.parameters(), lr=lr)
     # print(trainImages.shape, trainLabels.shape, testImages.shape, testLabels.shape)
@@ -100,7 +103,7 @@ if __name__ == "__main__":
                 images = images.cuda()
                 label = label.cuda()
             label = label.long()
-            predict = net(images)
+            predict = net(images, True)
             loss = net.loss(predict, label)
             optimizer.zero_grad()
             loss.backward()
@@ -129,3 +132,6 @@ if __name__ == "__main__":
         if maxIndex == label:
             correct += 1
     print("lr: {} accuracy rate: {}".format(lr, correct/count))
+
+
+

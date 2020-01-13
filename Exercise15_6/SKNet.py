@@ -6,43 +6,55 @@ from torch.utils.data import DataLoader
 import time
 import os
 
-class BaseBNNet(nn.Module):
-    def __init__(self):
-        super(BaseBNNet, self).__init__()
+class SKNet(nn.Module):
+    def __init__(self, cAlpha=1):
+        super(SKNet, self).__init__()
         """
-        按照 Exercise 中题目的说明, 翻了半天翻到的 BASE 在这里:
-            https://github.com/vlfeat/matconvnet/blob/master/examples/mnist/cnn_mnist_init.m
-        整个网络的结构:
-            PS: (1). 所有的 conv 都是 stride: 1 pad: 0 (2). 所有的 maxpooling 都是 stride 为 2
-            1. 5 * 5 * 1 * 20 conv + 2 * 2 maxpooling (28 -> 24 -> 12)
-            2. 5 * 5 * 20 * 50 conv + 2 * 2 maxpooling (12 -> 8 -> 4)
-            3. 4 * 4 * 50 * 500 conv(实际上就是一个 FC 层) + ReLU
-            4. classification layer 1 * 1 * 500 * 10 conv (其实就是一个 FC)
-            5. 使用 softmaxLoss -> L = -Σy_j*log(s_j)
+        SKNet 的做法:
+            PS: 就是把前面 BASENET 的第一个 conv 拆成了两个 conv
+                同时 每个 conv 后面都加一个 BN 和 ReLU
+            1. 3 * 3 * 1 * 20 conv
+            2. maxpooling
+            3. 3 * 3 * 20 * 20 conv
+            4. maxpooling
         """
-        self.conv1 = nn.Conv2d(1, 20, 5, stride=1, padding=0)
-        self.bn1 = nn.BatchNorm2d(20)
+        self.conv1_1 = nn.Conv2d(1, 20*cAlpha, 3, stride=1, padding=0)
+        self.bn1_1 = nn.BatchNorm2d(20*cAlpha)
+        self.relu1_1 = nn.ReLU(True)
+        self.conv1_2 = nn.Conv2d(20*cAlpha, 20*cAlpha, 3, stride=1, padding=0)
+        self.bn1_2 = nn.BatchNorm2d(20*cAlpha)
+        self.relu1_2 = nn.ReLU(True)
         self.maxpool1 = nn.MaxPool2d(2, stride=2)
-        self.conv2 = nn.Conv2d(20, 50, 5, stride=1, padding=0)
-        self.bn2 = nn.BatchNorm2d(50)
+        self.conv2 = nn.Conv2d(20*cAlpha, 50*cAlpha, 5, stride=1, padding=0)
+        self.bn2 = nn.BatchNorm2d(50*cAlpha)
+        self.relu2 = nn.ReLU(True)
         self.maxpool2 = nn.MaxPool2d(2, stride=2)
-        self.conv3 = nn.Conv2d(50, 500, 4, stride=1, padding=0)
-        self.bn3 = nn.BatchNorm2d(500)
-        self.ReLU = nn.ReLU(True)
-        self.conv4 = nn.Conv2d(500, 10, 1, stride=1, padding=0)
-        self.softmax = nn.Softmax(dim=1)
+        self.conv3 = nn.Conv2d(50*cAlpha, 500*cAlpha, 4, stride=1, padding=0)
+        self.bn3 = nn.BatchNorm2d(500*cAlpha)
+        self.relu3 = nn.ReLU(True)
+        self.conv4 = nn.Conv2d(500*cAlpha, 10, 1, stride=1, padding=0)
+        self.bn4 = nn.BatchNorm2d(10)
+        self.relu4 = nn.ReLU(True)
         self.dropout = nn.Dropout(0.7)
+        self.softmax = nn.Softmax(dim=1)
         self.pipeline = nn.Sequential(
-            self.conv1,
-            self.bn1,
+            self.conv1_1,
+            self.bn1_1,
+            self.relu1_1,
+            self.conv1_2,
+            self.bn1_2,
+            self.relu1_2,
             self.maxpool1,
             self.conv2,
             self.bn2,
+            self.relu2,
             self.maxpool2,
             self.conv3,
             self.bn3,
-            self.ReLU,
-            self.conv4
+            self.relu3,
+            self.conv4,
+            self.bn4,
+            self.relu4
         )
         # 参数初始化
         self.paramInit()
@@ -79,7 +91,7 @@ if __name__ == "__main__":
     trainLabels = dataReader.loadTrainLabels()
     testImages = dataReader.loadTestImages()
     testLabels = dataReader.loadTestLables()
-    net = BaseBNNet()
+    net = SKNet(cAlpha=1)
     cuda = True
     os.environ["CUDA_VISIBLE_DEVICES"] = "4"
     if cuda:
@@ -121,7 +133,6 @@ if __name__ == "__main__":
 
     count = 0
     correct = 0
-    net.eval()
     for i, data in enumerate(testLoader):
         count += 1
         if count%1000 == 0:
@@ -139,3 +150,6 @@ if __name__ == "__main__":
         if maxIndex == label:
             correct += 1
     print("lr: {} accuracy rate: {}".format(lr, correct/count))
+
+
+
