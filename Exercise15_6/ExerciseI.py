@@ -105,7 +105,7 @@ if __name__ == "__main__":
             for i in range(1):
                 paramList.append({
                     "name":"trainDataNumber: {} lr: {}".format(trainDataNumber, lr),
-                    "begin": trainDataNumber,
+                    "seed": trainDataNumber,
                     "lr": lr,
                     "INDEX": count,
                     "lossesList": lossesList,
