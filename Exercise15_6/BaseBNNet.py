@@ -6,9 +6,9 @@ from torch.utils.data import DataLoader
 import time
 import os
 
-class BaseNet(nn.Module):
+class BaseBNNet(nn.Module):
     def __init__(self):
-        super(BaseNet, self).__init__()
+        super(BaseBNNet, self).__init__()
         """
         按照 Exercise 中题目的说明, 翻了半天翻到的 BASE 在这里:
             https://github.com/vlfeat/matconvnet/blob/master/examples/mnist/cnn_mnist_init.m
@@ -21,19 +21,25 @@ class BaseNet(nn.Module):
             5. 使用 softmaxLoss -> L = -Σy_j*log(s_j)
         """
         self.conv1 = nn.Conv2d(1, 20, 5, stride=1, padding=0)
+        self.bn1 = nn.BatchNorm2d(20)
         self.maxpool1 = nn.MaxPool2d(2, stride=2)
         self.conv2 = nn.Conv2d(20, 50, 5, stride=1, padding=0)
+        self.bn2 = nn.BatchNorm2d(50)
         self.maxpool2 = nn.MaxPool2d(2, stride=2)
         self.conv3 = nn.Conv2d(50, 500, 4, stride=1, padding=0)
+        self.bn3 = nn.BatchNorm2d(500)
         self.ReLU = nn.ReLU(True)
         self.conv4 = nn.Conv2d(500, 10, 1, stride=1, padding=0)
         self.softmax = nn.Softmax(dim=1)
         self.pipeline = nn.Sequential(
             self.conv1,
+            self.bn1,
             self.maxpool1,
             self.conv2,
+            self.bn2,
             self.maxpool2,
             self.conv3,
+            self.bn3,
             self.ReLU,
             self.conv4
         )
@@ -70,7 +76,7 @@ if __name__ == "__main__":
     trainLabels = dataReader.loadTrainLabels()
     testImages = dataReader.loadTestImages()
     testLabels = dataReader.loadTestLables()
-    net = BaseNet()
+    net = BaseBNNet()
     cuda = True
     os.environ["CUDA_VISIBLE_DEVICES"] = "4"
     if cuda:
@@ -112,6 +118,7 @@ if __name__ == "__main__":
 
     count = 0
     correct = 0
+    net.eval()
     for i, data in enumerate(testLoader):
         count += 1
         if count%1000 == 0:
