@@ -115,6 +115,7 @@ if __name__ == "__main__":
 
     count = 0
     correct = 0
+    net = net.eval()
     for i, data in enumerate(testLoader):
         count += 1
         if count%1000 == 0:

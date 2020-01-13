@@ -18,21 +18,21 @@ class SKNet(nn.Module):
             3. 3 * 3 * 20 * 20 conv
             4. maxpooling
         """
-        self.conv1_1 = nn.Conv2d(1, 20*cAlpha, 3, stride=1, padding=0)
-        self.bn1_1 = nn.BatchNorm2d(20*cAlpha)
+        self.conv1_1 = nn.Conv2d(1, int(20*cAlpha), 3, stride=1, padding=0)
+        self.bn1_1 = nn.BatchNorm2d(int(20*cAlpha))
         self.relu1_1 = nn.ReLU(True)
-        self.conv1_2 = nn.Conv2d(20*cAlpha, 20*cAlpha, 3, stride=1, padding=0)
-        self.bn1_2 = nn.BatchNorm2d(20*cAlpha)
+        self.conv1_2 = nn.Conv2d(int(20*cAlpha), int(20*cAlpha), 3, stride=1, padding=0)
+        self.bn1_2 = nn.BatchNorm2d(int(20*cAlpha))
         self.relu1_2 = nn.ReLU(True)
         self.maxpool1 = nn.MaxPool2d(2, stride=2)
-        self.conv2 = nn.Conv2d(20*cAlpha, 50*cAlpha, 5, stride=1, padding=0)
-        self.bn2 = nn.BatchNorm2d(50*cAlpha)
+        self.conv2 = nn.Conv2d(int(20*cAlpha), int(50*cAlpha), 5, stride=1, padding=0)
+        self.bn2 = nn.BatchNorm2d(int(50*cAlpha))
         self.relu2 = nn.ReLU(True)
         self.maxpool2 = nn.MaxPool2d(2, stride=2)
-        self.conv3 = nn.Conv2d(50*cAlpha, 500*cAlpha, 4, stride=1, padding=0)
-        self.bn3 = nn.BatchNorm2d(500*cAlpha)
+        self.conv3 = nn.Conv2d(int(50*cAlpha), int(500*cAlpha), 4, stride=1, padding=0)
+        self.bn3 = nn.BatchNorm2d(int(500*cAlpha))
         self.relu3 = nn.ReLU(True)
-        self.conv4 = nn.Conv2d(500*cAlpha, 10, 1, stride=1, padding=0)
+        self.conv4 = nn.Conv2d(int(500*cAlpha), 10, 1, stride=1, padding=0)
         self.bn4 = nn.BatchNorm2d(10)
         self.relu4 = nn.ReLU(True)
         self.dropout = nn.Dropout(0.7)
@@ -63,7 +63,8 @@ class SKNet(nn.Module):
     # 参数初始化
     def paramInit(self):
         moduleL = []
-        moduleL.append(self.conv1)
+        moduleL.append(self.conv1_1)
+        moduleL.append(self.conv1_2)
         moduleL.append(self.conv2)
         moduleL.append(self.conv3)
         moduleL.append(self.conv4)
@@ -100,7 +101,7 @@ if __name__ == "__main__":
     # 采用的是 matconvnet 的配置
     batch_size = 100
     maxEpoch = 20
-    lr = 0.001
+    lr = 0.01
     # PS: 很神奇的是用 Adam 的时候损失函数不收敛... 一点都不变化... 用 Adam 的时候降低学习率就好了...
     optimizer = torch.optim.SGD(net.parameters(), lr=lr)
     # print(trainImages.shape, trainLabels.shape, testImages.shape, testLabels.shape)
@@ -121,7 +122,7 @@ if __name__ == "__main__":
                 images = images.cuda()
                 label = label.cuda()
             label = label.long()
-            predict = net(images, True)
+            predict = net(images, False)
             loss = net.loss(predict, label)
             optimizer.zero_grad()
             loss.backward()
@@ -133,6 +134,7 @@ if __name__ == "__main__":
 
     count = 0
     correct = 0
+    net = net.eval()
     for i, data in enumerate(testLoader):
         count += 1
         if count%1000 == 0:
