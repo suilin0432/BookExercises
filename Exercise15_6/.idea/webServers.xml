@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="483d03c1-3634-458d-8662-fdfd2752a668" name="rjsgpu" url="http://rjsgpu">
+        <fileTransfer host="rjsgpu" port="22" rootFolder="/home/suilin/codes" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

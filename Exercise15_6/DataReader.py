@@ -14,7 +14,7 @@ class DataReader(object):
                  trainImagesPath=defaultTrainImagesPath,
                  trainLabelsPath=defaultTrainLabelsPath,
                  testImagesPath=defaultTestImagesPath,
-                 testLabelsPath=defaultTrainLabelsPath):
+                 testLabelsPath=defaultTestLabelsPath):
         self.trainImagesPath = trainImagesPath
         self.trainLabelsPath = trainLabelsPath
         self.testImagesPath = testImagesPath
