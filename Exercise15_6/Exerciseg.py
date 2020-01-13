@@ -9,18 +9,18 @@ import os
 import matplotlib.pyplot as plt
 from multiprocessing import Process, Manager
 
-def oneTime(name, cAlpha, lr, INDEX, lossesList, accuracyList):
+def oneTime(name, trainDataNumber, lr, INDEX, lossesList, accuracyList):
     print("{}开始进程".format(name))
     dataReader = DataReader()
     trainImages = dataReader.loadTrainImages()
     trainLabels = dataReader.loadTrainLabels()
     testImages = dataReader.loadTestImages()
     testLabels = dataReader.loadTestLables()
-    net = SKNet(cAlpha=cAlpha)
+    net = SKNet(cAlpha=0.2)
     cuda = True
     if cuda:
         net = net.cuda()
-    trainDataNumber = 10000
+    # trainDataNumber = 10000
     # 采用的是 matconvnet 的配置
     batch_size = 100
     maxEpoch = 20
@@ -85,26 +85,26 @@ if __name__ == "__main__":
     # PS: 每个跑两次
     os.environ["CUDA_VISIBLE_DEVICES"] = "4"
     mgr = Manager()
-    lossesList = mgr.list([0 for i in range(30)])
-    accuracyList = mgr.list([0 for i in range(30)])
-    nameList = mgr.list([0 for i in range(30)])
+    lossesList = mgr.list([0 for i in range(42)])
+    accuracyList = mgr.list([0 for i in range(42)])
+    nameList = mgr.list([0 for i in range(42)])
     # cAlphaList = [0.2]
-    cAlphaList = [2, 1.5, 1, 0.5, 0.2]
+    trainDataNumberList = [500, 1000, 2000, 5000, 10000, 20000, 60000]
     lrList = [0.001, 0.002, 0.1]
     count = 0
-    for cAlpha in cAlphaList:
+    for trainDataNumber in trainDataNumberList:
         paramList = []
         for lr in lrList:
-            for i in range(2):
+            for i in range(1):
                 paramList.append({
-                    "name":"cAlpha: {} lr: {}".format(cAlpha, lr),
-                    "cAlpha": cAlpha,
+                    "name":"trainDataNumber: {} lr: {}".format(trainDataNumber, lr),
+                    "trainDataNumber": trainDataNumber,
                     "lr": lr,
                     "INDEX": count,
                     "lossesList": lossesList,
                     "accuracyList": accuracyList
                 })
-                nameList[count] = "cAlpha: {} lr: {}".format(cAlpha, lr)
+                nameList[count] = "trainDataNumber: {} lr: {}".format(trainDataNumber, lr)
                 count += 1
         processList = []
         for i in paramList:
@@ -115,9 +115,10 @@ if __name__ == "__main__":
         for p in processList:
             p.join()
     count = 0
-    for i in range(30):
+    print(accuracyList)
+    for i in range(42):
         count += 1
-        plt.subplot(5, 6, count)
+        plt.subplot(7, 6, count)
         losses = lossesList[count-1]
         accuracy = accuracyList[count-1]
         name = nameList[count-1]
