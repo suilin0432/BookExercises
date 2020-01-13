@@ -7,9 +7,9 @@ from SKNet import SKNet
 import time
 import os
 import matplotlib.pyplot as plt
-from multiprocessing import Process
+from multiprocessing import Process, Manager
 
-def oneTime(name, cAlpha, lr, INDEX):
+def oneTime(name, cAlpha, lr, INDEX, lossesList, accuracyList):
     print("{}开始进程".format(name))
     dataReader = DataReader()
     trainImages = dataReader.loadTrainImages()
@@ -23,7 +23,7 @@ def oneTime(name, cAlpha, lr, INDEX):
     trainDataNumber = 10000
     # 采用的是 matconvnet 的配置
     batch_size = 100
-    maxEpoch = 1
+    maxEpoch = 20
     lr = lr
     # PS: 很神奇的是用 Adam 的时候损失函数不收敛... 一点都不变化... 用 Adam 的时候降低学习率就好了...
     optimizer = torch.optim.SGD(net.parameters(), lr=lr)
@@ -50,7 +50,7 @@ def oneTime(name, cAlpha, lr, INDEX):
             loss = net.loss(predict, label)
             optimizer.zero_grad()
             loss.backward()
-            losses.append(loss)
+            losses.append(float(loss.detach().cpu()))
             optimizer.step()
             if index % 100 == 0:
                 print(name, "iter {} loss: {}".format(index, loss))
@@ -84,11 +84,12 @@ def oneTime(name, cAlpha, lr, INDEX):
 if __name__ == "__main__":
     # PS: 每个跑两次
     os.environ["CUDA_VISIBLE_DEVICES"] = "4"
-    lossesList = [[] for i in range(30)]
-    accuracyList = [0 for i in range(30)]
-    nameList = [0 for i in range(30)]
-    cAlphaList = [0.2]
-    # cAlphaList = [2, 1.5, 1, 0.5, 0.2]
+    mgr = Manager()
+    lossesList = mgr.list([0 for i in range(30)])
+    accuracyList = mgr.list([0 for i in range(30)])
+    nameList = mgr.list([0 for i in range(30)])
+    # cAlphaList = [0.2]
+    cAlphaList = [2, 1.5, 1, 0.5, 0.2]
     lrList = [0.001, 0.002, 0.1]
     count = 0
     for cAlpha in cAlphaList:
@@ -99,7 +100,9 @@ if __name__ == "__main__":
                     "name":"cAlpha: {} lr: {}".format(cAlpha, lr),
                     "cAlpha": cAlpha,
                     "lr": lr,
-                    "INDEX": count
+                    "INDEX": count,
+                    "lossesList": lossesList,
+                    "accuracyList": accuracyList
                 })
                 nameList[count] = "cAlpha: {} lr: {}".format(cAlpha, lr)
                 count += 1
@@ -112,13 +115,14 @@ if __name__ == "__main__":
         for p in processList:
             p.join()
     count = 0
+    print(lossesList, accuracyList)
     for i in range(30):
         count += 1
         plt.subplot(5, 6, count)
         losses = lossesList[count-1]
         accuracy = accuracyList[count-1]
         name = nameList[count-1]
-        print("name: {}, accuracy: {}".format(name, accuracy))
+        print("accuracy: {}".format(name, accuracy))
         plt.plot([i for i in range(len(losses))], losses)
         plt.title("{}, accuracy:{}".format(name, accuracy))
     plt.show()

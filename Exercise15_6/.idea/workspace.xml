@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SKNet.py" pinned="true" current-in-tab="true">
+      <file leaf-file-name="SKNet.py" pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;483d03c1-3634-458d-8662-fdfd2752a668&gt;/test/Exercise15_6/SKNet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="34" column="46" lean-forward="false" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+            <state relative-caret-position="316">
+              <caret line="57" column="9" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -63,8 +63,20 @@
       <file leaf-file-name="ExerciseF.py" pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;483d03c1-3634-458d-8662-fdfd2752a668&gt;/test/Exercise15_6/ExerciseF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="89" column="21" lean-forward="false" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+            <state relative-caret-position="270">
+              <caret line="128" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExerciseF.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ExerciseF.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -91,6 +103,7 @@
       <find>conv1</find>
       <find>self.</find>
       <find>0\.5</find>
+      <find>max</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -102,12 +115,12 @@
         <option value="&lt;483d03c1-3634-458d-8662-fdfd2752a668&gt;/test/Exercise15_6/BaseBNNet.py" />
         <option value="&lt;483d03c1-3634-458d-8662-fdfd2752a668&gt;/test/Exercise15_6/BaseNet.py" />
         <option value="$PROJECT_DIR$/BaseNet.py" />
-        <option value="$PROJECT_DIR$/SKNet.py" />
         <option value="$PROJECT_DIR$/ExerciseE.py" />
         <option value="&lt;483d03c1-3634-458d-8662-fdfd2752a668&gt;/test/Exercise15_6/ExerciseE.py" />
-        <option value="$PROJECT_DIR$/ExerciseF.py" />
-        <option value="&lt;483d03c1-3634-458d-8662-fdfd2752a668&gt;/test/Exercise15_6/ExerciseF.py" />
         <option value="&lt;483d03c1-3634-458d-8662-fdfd2752a668&gt;/test/Exercise15_6/SKNet.py" />
+        <option value="$PROJECT_DIR$/SKNet.py" />
+        <option value="&lt;483d03c1-3634-458d-8662-fdfd2752a668&gt;/test/Exercise15_6/ExerciseF.py" />
+        <option value="$PROJECT_DIR$/ExerciseF.py" />
       </list>
     </option>
   </component>
@@ -438,8 +451,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SKNet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
@@ -448,8 +461,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ExerciseF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="95" column="30" lean-forward="true" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
+        <state relative-caret-position="408">
+          <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
